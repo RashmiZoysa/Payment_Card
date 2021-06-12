@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneMainCard" minHeight="510.0" prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CardFormController">
+   <children>
+      <Label alignment="CENTER" prefHeight="55.0" prefWidth="650.0" style="-fx-background-color: black;" text="Card Details" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCID" alignment="CENTER" layoutX="295.0" layoutY="114.0" onAction="#searchOnAction" />
+      <TextField fx:id="txtNIC" alignment="CENTER" editable="false" layoutX="295.0" layoutY="165.0" />
+      <TextField fx:id="txttid" alignment="CENTER" editable="false" layoutX="295.0" layoutY="214.0" />
+      <TextField fx:id="txtDestination" alignment="CENTER" editable="false" layoutX="295.0" layoutY="264.0" />
+      <TextField fx:id="cmbCate" alignment="CENTER" editable="false" layoutX="172.0" layoutY="324.0" prefHeight="25.0" prefWidth="270.0" promptText="Card Category" />
+      <JFXComboBox fx:id="cmbDuration" focusColor="BLACK" layoutX="172.0" layoutY="372.0" prefHeight="25.0" prefWidth="270.0" promptText="Duration" unFocusColor="BLACK" />
+      <JFXDatePicker fx:id="lblexpDate" defaultColor="BLACK" layoutX="172.0" layoutY="426.0" prefHeight="25.0" prefWidth="277.0" promptText="Select Expire Date" />
+      <TextField fx:id="txtPrice" alignment="CENTER" layoutX="319.0" layoutY="489.0" prefHeight="25.0" prefWidth="129.0" />
+      <Label alignment="CENTER" layoutX="170.0" layoutY="113.0" text="Card ID  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="170.0" layoutY="263.0" text="Destination :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="170.0" layoutY="164.0" text="NIC  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="166.0" layoutY="488.0" prefHeight="27.0" prefWidth="149.0" text="Monthly Price  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnNew" layoutX="539.0" layoutY="95.0" minHeight="10.0" onAction="#NewOnAction" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #0f8228;" text="+New" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="527.0" layoutY="476.0" minHeight="10.0" onAction="#UpdateOnAction" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #1a64a1;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="527.0" layoutY="535.0" minHeight="10.0" onAction="#DeleteOnAction" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="172.0" layoutY="213.0" text="TID   :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

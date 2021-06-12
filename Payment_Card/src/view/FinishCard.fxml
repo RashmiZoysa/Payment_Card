@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneCardRegistered" prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FinishCardController">
+   <children>
+      <Label alignment="CENTER" layoutY="14.0" prefHeight="154.0" prefWidth="600.0" text="    Card &#10;Registered" textFill="#079e0e">
+         <font>
+            <Font name="System Bold" size="47.0" />
+         </font>j
+      </Label>
+      <JFXButton fx:id="btnlogout" layoutX="59.0" layoutY="537.0" onAction="#logoutOnAction" prefHeight="47.0" prefWidth="517.0" style="-fx-background-color: red;" text="LogOut" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></JFXButton>
+      <ImageView fitHeight="300.0" fitWidth="500.0" layoutX="99.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/15.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

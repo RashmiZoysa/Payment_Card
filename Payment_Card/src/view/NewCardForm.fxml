@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneNewCard" prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewCardFormController">
+   <children>
+      <Label layoutX="211.0" layoutY="77.0" prefHeight="38.0" prefWidth="97.0" text="Card Id  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblId" alignment="CENTER" contentDisplay="CENTER" layoutX="329.0" layoutY="83.0" prefHeight="27.0" prefWidth="129.0" style="-fx-background-color: #686868;" textFill="#fffdfd" />
+      <TextField fx:id="txtnic" alignment="CENTER" layoutX="308.0" layoutY="135.0" prefHeight="30.0" prefWidth="129.0" />
+      <JFXComboBox fx:id="cmbDuration" focusColor="BLACK" labelFloat="true" layoutX="31.0" layoutY="178.0" prefHeight="30.0" prefWidth="300.0" promptText="Duration" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbCategory1" focusColor="BLACK" labelFloat="true" layoutX="31.0" layoutY="238.0" onAction="#categoryOnAction" prefHeight="30.0" prefWidth="300.0" promptText="Category" unFocusColor="BLACK" />
+      <TextField fx:id="lblDesc" alignment="CENTER" editable="false" layoutX="31.0" layoutY="297.0" prefHeight="30.0" prefWidth="563.0" promptText="Category Description" style="-fx-background-color: b8b0b0;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <JFXComboBox fx:id="cmbDestination" focusColor="BLACK" labelFloat="true" layoutX="31.0" layoutY="343.0" prefHeight="30.0" prefWidth="300.0" promptText="Destination" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbTransCat" focusColor="BLACK" labelFloat="true" layoutX="31.0" layoutY="399.0" prefHeight="30.0" prefWidth="300.0" promptText="Transport Categories" unFocusColor="BLACK" />
+      <JFXDatePicker fx:id="datePicker" defaultColor="BLACK" layoutX="31.0" layoutY="448.0" prefHeight="38.0" prefWidth="300.0" promptText="Set the expire date" />
+      <JFXComboBox fx:id="cmbType" layoutX="31.0" layoutY="517.0" prefHeight="25.0" prefWidth="300.0" promptText="Payment Type" unFocusColor="BLACK" />
+      <Label fx:id="lblPrice" contentDisplay="CENTER" layoutX="475.0" layoutY="459.0" prefHeight="50.0" prefWidth="114.0" style="-fx-border-color: Black; -fx-background-color: white;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <JFXButton fx:id="btnCalcualte" alignment="CENTER" layoutX="532.0" layoutY="412.0" onAction="#calculateOnAction" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #534f4f;" text="Calculate" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="458.0" layoutY="413.0" text="Price   :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <JFXButton fx:id="btnSave" layoutX="436.0" layoutY="530.0" onAction="#saveOnAction" prefHeight="27.0" prefWidth="193.0" style="-fx-background-color: #0f8228;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" prefHeight="55.0" prefWidth="650.0" style="-fx-background-color: black;" text="New Card Form" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="238.0" layoutY="137.0" prefHeight="27.0" prefWidth="54.0" text="NIC  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneBus" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BusFormController">
+   <children>
+      <AnchorPane layoutX="122.0" layoutY="279.0" prefHeight="250.0" prefWidth="400.0" style="-fx-background-color: #7c7878; -fx-border-color: black;">
+         <children>
+            <JFXTextField fx:id="txtOwnerName" focusColor="BLACK" labelFloat="true" layoutX="23.0" layoutY="64.0" prefHeight="31.0" prefWidth="342.0" promptText="Owner Name" unFocusColor="BLACK">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtOwnerNIC" focusColor="BLACK" labelFloat="true" layoutX="23.0" layoutY="107.0" prefHeight="31.0" prefWidth="342.0" promptText="Owner NIC" unFocusColor="BLACK">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtOwnerAddress" focusColor="BLACK" labelFloat="true" layoutX="23.0" layoutY="151.0" prefHeight="31.0" prefWidth="342.0" promptText="Owner Permenent Address" unFocusColor="BLACK">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtOwnerContactNo" focusColor="BLACK" labelFloat="true" layoutX="23.0" layoutY="194.0" prefHeight="31.0" prefWidth="342.0" promptText="Contact No" unFocusColor="BLACK">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label alignment="CENTER" layoutY="9.0" prefHeight="31.0" prefWidth="405.0" style="-fx-background-color: black;" text="Bus Owner Details" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" prefHeight="55.0" prefWidth="650.0" style="-fx-background-color: black;" text="Bus Information" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBID" alignment="CENTER" editable="false" layoutX="279.0" layoutY="72.0" onAction="#searchOnAction" prefHeight="25.0" prefWidth="70.0" promptText="Bus ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnSave" layoutX="123.0" layoutY="551.0" minHeight="10.0" onAction="#SaveOnAction" prefHeight="35.0" prefWidth="405.0" style="-fx-background-color: #0f8228;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtNo" focusColor="BLACK" labelFloat="true" layoutX="34.0" layoutY="115.0" prefHeight="31.0" prefWidth="250.0" promptText="Bus No" unFocusColor="BLACK">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="366.0" layoutY="115.0" prefHeight="31.0" prefWidth="250.0" promptText="Bus Name" unFocusColor="BLACK">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbRoute" layoutX="34.0" layoutY="179.0" prefHeight="25.0" prefWidth="250.0" promptText="RouteDestination" />
+      <JFXDatePicker fx:id="txtDate" defaultColor="#282728" layoutX="366.0" layoutY="176.0" prefHeight="31.0" prefWidth="250.0" promptText="Select the Adding Date" />
+      <JFXComboBox fx:id="cmbFacilities" layoutX="34.0" layoutY="239.0" prefHeight="25.0" prefWidth="250.0" promptText="Bus Facilities" />
+      <JFXComboBox fx:id="cmbType" layoutX="366.0" layoutY="239.0" prefHeight="25.0" prefWidth="250.0" promptText="Bus Type" />
+   </children>
+</AnchorPane>

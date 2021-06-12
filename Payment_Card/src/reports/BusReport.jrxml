@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-10T14:11:21 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BusReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="41073ce5-d9aa-4384-8611-b01b11f4fd24">
+<!--	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>-->
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Rashmi&apos;s Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM BUS]]>
+	</queryString>
+	<field name="BusNo" class="java.lang.String"/>
+	<field name="Route" class="java.lang.String"/>
+	<field name="RegisterDate" class="java.lang.String"/>
+	<field name="BusFacilities" class="java.lang.String"/>
+	<field name="BusType" class="java.lang.String"/>
+	<field name="OwnerName" class="java.lang.String"/>
+	<group name="BusNo">
+		<groupExpression><![CDATA[$F{BusNo}]]></groupExpression>
+	</group>
+	<group name="Route">
+		<groupExpression><![CDATA[$F{Route}]]></groupExpression>
+	</group>
+	<group name="RegisterDate">
+		<groupExpression><![CDATA[$F{RegisterDate}]]></groupExpression>
+	</group>
+	<group name="BusFacilities">
+		<groupExpression><![CDATA[$F{BusFacilities}]]></groupExpression>
+	</group>
+	<group name="BusType">
+		<groupExpression><![CDATA[$F{BusType}]]></groupExpression>
+	</group>
+	<group name="OwnerName">
+		<groupExpression><![CDATA[$F{OwnerName}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="0" width="193" height="60" uuid="9cb4bb32-fe02-48bd-908a-4277059a6f69"/>
+				<textElement textAlignment="Center">
+					<font fontName="Adobe Arabic" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+Bus Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="2" width="60" height="30" uuid="8a662d27-56bc-4e3a-946d-8036cf69394a"/>
+				<text><![CDATA[Route]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="2" width="87" height="30" uuid="e933b93b-2369-40dd-bc15-f8905281a9e4"/>
+				<text><![CDATA[RegisterDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="0" width="83" height="30" uuid="6c0de040-1379-4b91-9594-e63a90317c24"/>
+				<text><![CDATA[BusFacilities]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="80" height="30" uuid="dbf22cce-6ed5-4add-a7f4-86ddb07a3e44"/>
+				<text><![CDATA[BusType]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="2" width="80" height="30" uuid="c8bbc65d-85b3-4fb1-8fbd-1f7163c675af"/>
+				<text><![CDATA[OwnerName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="60" height="30" uuid="69717f01-eb21-4802-94df-1ad22c09461e"/>
+				<text><![CDATA[BusNo]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="-1" y="0" width="51" height="30" uuid="887bf0a3-1954-4b7c-85dd-0cc46266a717"/>
+				<textFieldExpression><![CDATA[$F{BusNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-101" y="17" width="100" height="30" uuid="a2db3c32-0cb9-430a-9f5c-29f7b8f235db"/>
+				<text><![CDATA[BusNo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="0" width="60" height="30" uuid="d1503d42-6066-455e-9ee9-13e0e9cb6f29"/>
+				<textFieldExpression><![CDATA[$F{Route}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="87" height="30" uuid="e81c034f-3dd8-4cc4-9e7b-de9aa4a4a72b"/>
+				<textFieldExpression><![CDATA[$F{RegisterDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="0" width="100" height="30" uuid="5927a0ad-4403-4bf1-8f75-e9c40bb63da2"/>
+				<textFieldExpression><![CDATA[$F{BusFacilities}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="73" height="30" uuid="952d79b5-0112-4832-8057-3b34fa64f0ed"/>
+				<textFieldExpression><![CDATA[$F{BusType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="90" height="30" uuid="6a931610-4788-46c5-af66-695be7f8f895"/>
+				<textFieldExpression><![CDATA[$F{OwnerName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

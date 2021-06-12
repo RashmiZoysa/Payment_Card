@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-07T10:31:19 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CardReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="79670b6a-14e5-4900-a7c7-40cc4c4733e7">
+<!--	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>-->
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Rashmi&apos;s Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM card]]>
+	</queryString>
+	<field name="CID" class="java.lang.String"/>
+	<field name="NIC" class="java.lang.String"/>
+	<field name="destination" class="java.lang.String"/>
+	<field name="duration" class="java.lang.String"/>
+	<field name="expireDate" class="java.lang.String"/>
+	<field name="price" class="java.math.BigDecimal"/>
+	<group name="CID">
+		<groupExpression><![CDATA[$F{CID}]]></groupExpression>
+	</group>
+	<group name="NIC">
+		<groupExpression><![CDATA[$F{NIC}]]></groupExpression>
+	</group>
+	<group name="destination">
+		<groupExpression><![CDATA[$F{destination}]]></groupExpression>
+	</group>
+	<group name="duration">
+		<groupExpression><![CDATA[$F{duration}]]></groupExpression>
+	</group>
+	<group name="expireDate">
+		<groupExpression><![CDATA[$F{expireDate}]]></groupExpression>
+	</group>
+	<group name="price">
+		<groupExpression><![CDATA[$F{price}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="10" width="240" height="40" uuid="c9710426-dec2-421d-aaa7-2c3c25c83770"/>
+				<textElement textAlignment="Center">
+					<font fontName="Adobe Hebrew" size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Card Report
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="2" width="80" height="30" uuid="9a7cb031-cba4-45a9-af89-5f0ffb4e3f61"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[destination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="2" width="80" height="30" uuid="74bee974-b023-4ebf-8cee-1764efbf7915"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[duration]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="0" width="100" height="30" uuid="35d3715c-4202-47e4-9c79-ff80883c880b"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[expireDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="100" height="30" uuid="576602d6-5bc3-409a-b6cb-f71cd4786eb6"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="60" height="30" uuid="fce0efc5-3e93-4d33-8057-355c1aff921a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[CID]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="0" width="70" height="30" uuid="050b03bf-6e9a-4361-8a6c-758dff5dec61"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="80" height="30" uuid="91cc3490-2745-49a9-8198-24310ea1012c"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{destination}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="80" height="30" uuid="079ffedb-1f33-4616-a980-4438d2be8aff"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{duration}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="100" height="30" uuid="cc370183-209d-4baf-8e65-c0ba3ea28a50"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{expireDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="100" height="30" uuid="bce9f24b-df0a-4add-812e-783220a560d9"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

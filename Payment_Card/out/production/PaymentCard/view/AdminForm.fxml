@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneAdminForm" prefHeight="600.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminFormController">
+   <children>
+      <AnchorPane fx:id="paneAdminDashBoard" prefHeight="600.0" prefWidth="230.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fitHeight="132.0" fitWidth="230.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/images.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnDriver" alignment="TOP_CENTER" layoutY="291.0" onAction="#DriverOnAction" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #353030;" text="     Driver Manage" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnBus" alignment="TOP_CENTER" layoutY="391.0" onAction="#BusOnAction" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #353030;" text="Bus Manage" textFill="#dacece">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="imgBack" fitHeight="35.0" fitWidth="30.0" layoutX="14.0" layoutY="133.0" onMouseClicked="#BackOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/home.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnReport" alignment="TOP_CENTER" layoutX="1.0" layoutY="491.0" onAction="#ReportOnAction" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #353030;" text="Reports" textFill="#dacece">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="87.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/User.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="87.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/Card.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="95.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/Report.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCounter" fitHeight="70.0" fitWidth="151.0" layoutX="46.0" layoutY="191.0" onMouseClicked="#CounterOnAction" opacity="0.71" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/bill.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="45.0" layoutY="209.0" prefHeight="40.0" prefWidth="130.0" text="Counter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneAdmin" layoutX="231.0" layoutY="-6.0" prefHeight="600.0" prefWidth="650.0">
+         <children>
+            <ImageView fitHeight="472.0" fitWidth="546.0" layoutX="65.0" layoutY="115.0" opacity="0.59" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/146465.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="42.0" prefHeight="73.0" prefWidth="650.0" text="Welcome !">
+               <font>
+                  <Font name="System Bold Italic" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

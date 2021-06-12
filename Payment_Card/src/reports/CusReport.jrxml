@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-07T09:19:03 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CusReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="46d2ff7a-3eac-4850-951f-8e8de6ad94b7">
+<!--	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>-->
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Rashmi&apos;s Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM customer]]>
+	</queryString>
+	<field name="NIC" class="java.lang.String"/>
+	<field name="CustomerName" class="java.lang.String"/>
+	<field name="DOB" class="java.lang.String"/>
+	<field name="ContactNO" class="java.lang.String"/>
+	<group name="NIC">
+		<groupExpression><![CDATA[$F{NIC}]]></groupExpression>
+	</group>
+	<group name="CustomerName">
+		<groupExpression><![CDATA[$F{CustomerName}]]></groupExpression>
+	</group>
+	<group name="DOB">
+		<groupExpression><![CDATA[$F{DOB}]]></groupExpression>
+	</group>
+	<group name="ContactNO">
+		<groupExpression><![CDATA[$F{ContactNO}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="97" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="10" width="290" height="50" uuid="ba37e234-80c8-466c-89ef-8c897cf4cce5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Adobe Arabic" size="22" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[
+Customer Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="2" width="100" height="30" uuid="057e4500-0a18-4069-959b-6eb62c14e534"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CustomerName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="30" uuid="be1e73ce-7d44-4791-9b5e-9781af9de96d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[DOB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="2" width="100" height="30" uuid="7fe46450-d523-4bc5-ad14-ea38628a8598"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ContactNO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="-11" y="0" width="100" height="30" uuid="29b13484-866d-4a96-8637-1c62be7ab9aa"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NIC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-55" y="68" width="100" height="30" uuid="1005d2ae-ff0f-43a3-acc5-cfc109195e6f"/>
+				<text><![CDATA[NIC]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="0" width="100" height="30" uuid="452cd38e-a7ae-4825-9d0b-f11ec5c7170b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CustomerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="100" height="30" uuid="dfd77f17-a6b6-4635-89ff-c5393e510472"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DOB}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="-3" width="100" height="30" uuid="519cfba7-6b24-405f-95aa-0df0222a2393"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ContactNO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

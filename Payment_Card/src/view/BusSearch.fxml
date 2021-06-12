@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneBusSearch" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BusSearchController">
+   <children>
+      <Label alignment="CENTER" prefHeight="25.0" prefWidth="650.0" style="-fx-background-color: black;" text="Bus Informations" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblBus" layoutX="9.0" layoutY="114.0" prefHeight="171.0" prefWidth="633.0">
+        <columns>
+          <TableColumn fx:id="colBusNo" prefWidth="64.0" text="Bus No" />
+          <TableColumn fx:id="colBusName" prefWidth="89.0" text="Bus Name" />
+            <TableColumn fx:id="colRoute" prefWidth="141.0" text="Route" />
+            <TableColumn fx:id="colDate" prefWidth="91.0" text="Date" />
+            <TableColumn fx:id="colFacilities" prefWidth="139.0" text="Bus Facilities" />
+            <TableColumn fx:id="colType" prefWidth="107.0" text="Bus Type" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblOwner" layoutX="9.0" layoutY="355.0" prefHeight="192.0" prefWidth="633.0">
+        <columns>
+          <TableColumn fx:id="colOwnerName" prefWidth="140.0" text="Owner Name" />
+          <TableColumn fx:id="colNIC" prefWidth="110.0" text="Owner NIC" />
+            <TableColumn fx:id="colAddress" prefWidth="231.0" text="Ower Address" />
+            <TableColumn fx:id="colContactNo" prefWidth="151.0" text="Contact No" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutY="300.0" prefHeight="27.0" prefWidth="650.0" style="-fx-background-color: black;" text="Bus Owner Informations(Optional)" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnNew" layoutX="541.0" layoutY="54.0" onAction="#NewOnAction" prefHeight="35.0" prefWidth="83.0" style="-fx-background-color: #0f8228;" text="Add New" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSearch" layoutX="174.0" layoutY="59.0" onAction="#SearchOnAction" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #297bb5;" text="Search" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="553.0" layoutY="555.0" onAction="#DeleteOnAction" prefHeight="35.0" prefWidth="83.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="456.0" layoutY="555.0" onAction="#UpdateOnAction" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #1a64a1;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbBID" focusColor="BLACK" labelFloat="true" layoutX="28.0" layoutY="61.0" prefHeight="25.0" prefWidth="128.0" promptText="Bus ID" unFocusColor="BLACK" />
+   </children>
+</AnchorPane>
